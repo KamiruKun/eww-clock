@@ -1,0 +1,43 @@
+$bg: rgba(30, 30, 46, 0.4);
+$bg-hover: rgba(49, 50, 68, 0.7);
+$border: rgba(255, 255, 255, 0.1);
+$fg: #cdd6f4;
+$subtext: #a6adc8;
+
+* {
+  all: unset;
+  font-family: "Monocraft";
+}
+
+.container-clock {
+  @extend .container;
+  padding: 15px;
+  background-color: rgba(30, 30, 46, 0.6);
+}
+
+.clock-time-huge {
+  font-size: 48px;
+  font-weight: 900;
+  color: $ram-color; // Niebieski akcent
+  text-shadow: 0 0 10px rgba($ram-color, 0.4);
+}
+
+.clock-separator {
+  font-size: 44px;
+  color: $subtext;
+  margin-bottom: 4px;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.clock-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: $fg;
+  margin-top: -5px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
