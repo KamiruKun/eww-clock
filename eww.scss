@@ -4,15 +4,6 @@ $border: rgba(255, 255, 255, 0.1);
 $fg: #cdd6f4;
 $subtext: #a6adc8;
 
-.container {
-  background-color: $bg;
-  border-radius: 24px;
-  padding: 25px;
-  border: 1px solid $border;
-  // Box-shadow dodaje głębi na tapecie
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-}
-
 * {
   all: unset;
   font-family: "Monocraft";
