@@ -1,1 +1,1 @@
-# eww-widgets
+# eww-clock
