@@ -1,0 +1,22 @@
+;; Zmienne czasu
+(defpoll hour   :interval "1s" "date '+%H'")
+(defpoll min    :interval "1s" "date '+%M'")
+(defpoll day    :interval "1h" "date '+%A, %d %B'")
+
+(defwindow clock
+  :monitor 0
+  :geometry (geometry :x "850px" :y "500px" :width "220px" :height "100px" :anchor "top right")
+  :stacking "bottom"
+  :wm-ignore false
+  (clock_widget))
+
+(defwidget clock_widget []
+  (box :class "container-clock" :orientation "v" :space-evenly true 
+    (box :orientation "h" :halign "center" :space-evenly false :spacing 10
+      (label :text "${hour}" :class "clock-time-huge")
+      (label :text ":"       :class "clock-separator")
+      (label :text "${min}"  :class "clock-time-huge")
+    )
+    (label :text "${day}" :class "clock-date")
+  )
+)
